@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9z2iFwRQoHGiyhU9GM0Jre7WQHMNZCtoO5/55r7uBoXwzq4VWkkEwgf6z8Co0FaUzVSjW8NthYv/Yzxy8FOWzg==",
+  "dgSpecHash": "muSvauRxkf0HnSMwWbZoOwLHfzzLo1JN2WObdLFYf+baDrj/1lG03XpcEQeJcF9r5S4+y5eJrQfmwPZ6l5Wj3Q==",
   "success": true,
-  "projectFilePath": "c:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\cookBook-api.csproj",
+  "projectFilePath": "C:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\cookBook-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\linne\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\linne\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

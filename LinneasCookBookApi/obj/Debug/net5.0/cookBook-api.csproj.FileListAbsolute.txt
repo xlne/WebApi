@@ -1,0 +1,7 @@
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.csproj.AssemblyReference.cache
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.AssemblyInfoInputs.cache
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.AssemblyInfo.cs
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.csproj.CoreCompileInputs.cache
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.MvcApplicationPartsAssemblyInfo.cache

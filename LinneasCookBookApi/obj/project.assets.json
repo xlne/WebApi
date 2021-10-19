@@ -5,7 +5,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Humanizer.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -1294,25 +1294,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\linne\\.nuget\\packages\\": {}
+    "C:\\Users\\linne\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\cookBook-api.csproj",
+      "projectUniqueName": "C:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\cookBook-api.csproj",
       "projectName": "cookBook-api",
-      "projectPath": "c:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\cookBook-api.csproj",
+      "projectPath": "C:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\cookBook-api.csproj",
       "packagesPath": "C:\\Users\\linne\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\obj\\",
+      "outputPath": "C:\\Users\\linne\\OneDrive\\Dokument\\WebApi\\LinneasCookBookApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\linne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1378,7 +1384,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
