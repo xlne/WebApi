@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using cookBook_api.Data;
 using cookBook_api.Interfaces;
 using cookBook_api.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace cookBook_api.Repositories
 {
@@ -16,19 +17,27 @@ namespace cookBook_api.Repositories
             _context = context;
         }
 
-        public Task<bool> AddDifficultyAsync(Complexity complexity)
+        public async Task<bool> AddDifficultyAsync(Complexity complexity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                 await _context.Complexities.AddAsync(complexity);
+                 return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public Task<Complexity> GetComplexityAsync(string complexity)
+        public async Task<Complexity> GetComplexityAsync(string complexity)
         {
-            throw new NotImplementedException();
+            return await _context.Complexities.FirstOrDefaultAsync(c => c.Difficulty.ToLower().Trim() == complexity.ToLower().Trim());
         }
 
-        public Task<IList<Complexity>> ListDifficultyAsync()
+        public async Task<IList<Complexity>> ListDifficultyAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Complexities.ToListAsync();
         }
     }
 }

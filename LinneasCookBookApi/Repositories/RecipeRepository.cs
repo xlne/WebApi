@@ -39,27 +39,40 @@ namespace cookBook_api.Repositories
 
         public async Task<Recipe> FindRecipeByNameAsync(string name)
         {
-            return await _context.Recipes.Where(c => c.RecipeName.Trim().ToLower() == .ToLower().Trim()).ToListAsync();
-            // var result = await _context.Recipes
-            // .Include(c => c.Complexity)
-            // .Where(c => c.Complexity.Difficulty.Trim().ToLower() == )
-
-            // return result;
+            return await _context.Recipes
+            .Include(c => c.RecipeName)            
+            .FirstOrDefaultAsync(c => c.RecipeName.Trim().ToLower() == name.Trim().ToLower());
         }
 
-        public Task<IList<Recipe>> ListAllRecipesAsync()
+        public async Task<IList<Recipe>> ListAllRecipesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Recipes.Include(c => c.Complexity).ToListAsync();
         }
 
         public bool RemoveRecipe(Recipe recipe)
         {
-            throw new NotImplementedException();
+            try
+            {
+                 _context.Recipes.Remove(recipe);
+                 return true;
+            }
+            catch (System.Exception)
+            {
+                return false;
+            }
         }
 
         public bool UpdateRecipe(Recipe recipe)
         {
-            throw new NotImplementedException();
+            try
+            {
+                 _context.Recipes.Update(recipe);
+                 return true;
+            }
+            catch (System.Exception)
+            {
+                return false;
+            }
         }
     }
 }
