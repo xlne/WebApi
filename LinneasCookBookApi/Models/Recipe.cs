@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,10 @@ namespace cookBook_api.Models
     {
         public int Id { get; set; } 
         public string RecipeName { get; set; }
-        public int Complexity { get; set; }
+        public int ComplexityId { get; set; }
         public string Ingredients { get; set; }
+        
+        [ForeignKey("ComplexityId")]
+        public Complexity Complexity {get; set;}
     }
 }
