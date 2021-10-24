@@ -11,7 +11,7 @@ namespace cookBook_api.Data
     {
         public DbSet<Recipe> Recipes {get; set;}
         public DbSet<Complexity> Complexities {get; set;}
-        public RecipeContext(DbContextOptions options) : base(options)
+        public RecipeContext(DbContextOptions<RecipeContext> options) : base(options)
         {
             
         }
