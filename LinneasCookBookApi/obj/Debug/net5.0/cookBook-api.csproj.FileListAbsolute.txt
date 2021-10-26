@@ -57,3 +57,4 @@ C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cook
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\ref\cookBook-api.dll
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.pdb
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.genruntimeconfig.cache
+C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.csproj.CopyComplete

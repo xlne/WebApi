@@ -38,9 +38,6 @@ namespace cookBook_api.Data.Migrations
                     b.Property<int>("ComplexityId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Ingredients")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("RecipeName")
                         .HasColumnType("TEXT");
 
@@ -54,12 +51,17 @@ namespace cookBook_api.Data.Migrations
             modelBuilder.Entity("cookBook_api.Models.Recipe", b =>
                 {
                     b.HasOne("cookBook_api.Models.Complexity", "Complexity")
-                        .WithMany()
+                        .WithMany("Recipes")
                         .HasForeignKey("ComplexityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Complexity");
+                });
+
+            modelBuilder.Entity("cookBook_api.Models.Complexity", b =>
+                {
+                    b.Navigation("Recipes");
                 });
 #pragma warning restore 612, 618
         }

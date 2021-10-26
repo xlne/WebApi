@@ -26,8 +26,7 @@ namespace cookBook_api.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     RecipeName = table.Column<string>(type: "TEXT", nullable: true),
-                    ComplexityId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Ingredients = table.Column<string>(type: "TEXT", nullable: true)
+                    ComplexityId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

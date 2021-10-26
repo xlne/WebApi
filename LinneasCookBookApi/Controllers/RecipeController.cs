@@ -40,7 +40,7 @@ namespace cookBook_api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.InnerException.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -50,8 +50,13 @@ namespace cookBook_api.Controllers
             var toUpdate = await _unitOfWork.RecipeRepository.FindRecipeAsync(id);
             if(toUpdate == null) return NotFound($"Could not find the recipe with id: {id}");
 
-            var updatedRecipe = _mapper.Map<ViewModel>(toUpdate);
-            return Ok(updatedRecipe);            
+            var resolvedRecipe = _mapper.Map<Recipe>(recipe, opt => opt.Items["repo"] = _unitOfWork.Context);
+            toUpdate = _mapper.Map<Recipe, Recipe>(resolvedRecipe, toUpdate);
+
+            if (_unitOfWork.RecipeRepository.UpdateRecipe(toUpdate))
+                if (await _unitOfWork.Complete()) return NoContent();
+
+            return StatusCode(500, "Something else went wrong.");            
         }
         
         [HttpGet()]
@@ -87,15 +92,15 @@ namespace cookBook_api.Controllers
         }
         
         
-        [HttpPatch("{id}")]
-        public async Task<IActionResult> UpdateDifficulty(int id, [FromBody] PatchComplexityViewModel recipe)
-        {
-            var toUpdate = await _unitOfWork.RecipeRepository.FindRecipeAsync(id);
-            if(toUpdate == null) return NotFound($"Could not find the recipe with id: {id}");
+        // [HttpPatch("{id}")]
+        // public async Task<IActionResult> UpdateDifficulty(int id, [FromBody] PatchComplexityViewModel recipe)
+        // {
+        //     var toUpdate = await _unitOfWork.RecipeRepository.FindRecipeAsync(id);
+        //     if(toUpdate == null) return NotFound($"Could not find the recipe with id: {id}");
 
-            var difficulty = _mapper.Map<PatchComplexityViewModel>(toUpdate); 
-            return Ok(difficulty);
-        }
+        //     var difficulty = _mapper.Map<PatchComplexityViewModel>(toUpdate); 
+        //     return Ok(difficulty);
+        // }
     }
 }
 
