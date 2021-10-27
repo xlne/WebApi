@@ -35,6 +35,11 @@ namespace cookBook_api.Repositories
             return await _context.Complexities.FirstOrDefaultAsync(c => c.Difficulty.ToLower().Trim() == complexity.ToLower().Trim());
         }
 
+         public async Task<Complexity> GetDifficultyId(int id)
+        {
+            return await _context.Complexities.FindAsync(id);
+        }
+
         public async Task<IList<Complexity>> ListDifficultyAsync()
         {
             return await _context.Complexities.ToListAsync();

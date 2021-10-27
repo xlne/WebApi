@@ -10,6 +10,7 @@ namespace cookBook_api.Interfaces
     {
         Task<bool> AddDifficultyAsync(Complexity complexity);
         Task<IList<Complexity>> ListDifficultyAsync();
+        Task<Complexity> GetDifficultyId(int id);
         Task<Complexity> GetComplexityAsync(string complexity);
     }
 }

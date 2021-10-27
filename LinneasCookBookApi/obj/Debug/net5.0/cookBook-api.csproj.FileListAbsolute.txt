@@ -7,7 +7,6 @@ C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cook
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\obj\Debug\net5.0\cookBook-api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\bin\Debug\net5.0\appsettings.json
-C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\bin\Debug\net5.0\Data\recipes.json
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\bin\Debug\net5.0\cookBook-api.exe
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\bin\Debug\net5.0\cookBook-api.deps.json
 C:\Users\linne\OneDrive\Dokument\WebApi\LinneasCookBookApi\bin\Debug\net5.0\cookBook-api.runtimeconfig.json

@@ -40,16 +40,26 @@ namespace cookBook_api.Controllers
             var difficulty = _mapper.Map<List<ViewModel>>(result);
             return Ok(difficulty);
         }
-        
-        [HttpGet("{difficulty}")]
-        public async Task<IActionResult> GetDifficulty(string difficulty)
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetDifficultyId(int id)
         {
-            var result = await _unitOfWork.ComplexityRepository.GetComplexityAsync(difficulty);
-            if(result == null) return NotFound($"Could not find difficulty {difficulty} for recipes.");
+            var result = await _unitOfWork.ComplexityRepository.GetDifficultyId(id);
+            if(result == null) return NotFound($"Could not find difficulty with id: {id}.");
 
             var level = _mapper.Map<ViewModel>(result);
             return Ok(level);
         }
 
+        
+        [HttpGet("byName/{difficulty}")]
+        public async Task<IActionResult> GetDifficulty(string difficulty)
+        {
+            var result = await _unitOfWork.ComplexityRepository.GetComplexityAsync(difficulty);
+            if(result == null) return NotFound($"Could not find difficulty with id {difficulty} for recipes.");
+
+            var level = _mapper.Map<ViewModel>(result);
+            return Ok(level);
+        }
     }
 }

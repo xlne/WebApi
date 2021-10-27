@@ -35,6 +35,7 @@ namespace cookBook_api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "cookBook_api", Version = "v1" });
+                c.CustomSchemaIds(i => i.FullName);
             });
         }
 
