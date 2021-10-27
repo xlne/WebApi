@@ -12,7 +12,6 @@ namespace cookBook_api.Data
         public static async Task LoadRecipes(RecipeContext context)
         {
             if (await context.Recipes.AnyAsync()) return;
-            //context.Recipe.AnyAsync()) return;
             var data = await File.ReadAllTextAsync("Data/recipes.json");
             var recipes = JsonSerializer.Deserialize<List<Recipe>>(data);
         }

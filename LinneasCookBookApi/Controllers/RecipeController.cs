@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using cookBook_api.Interfaces;
@@ -91,7 +90,8 @@ namespace cookBook_api.Controllers
             return StatusCode(500, "Could not remove the recipe.");
         }
         
-        
+        //Kept this if function will be used later.
+
         // [HttpPatch("{id}")]
         // public async Task<IActionResult> UpdateDifficulty(int id, [FromBody] PatchComplexityViewModel recipe)
         // {
@@ -103,15 +103,3 @@ namespace cookBook_api.Controllers
         // }
     }
 }
-
-
-
-/*
-lägga till - addRecipe - POST
-lista - getRecipes - GET
-söka -  GetOneRecipe - GET
-uppdatera - updateRecipe - PUT
-uppdatera svårighet - UpdateDifficulty - PATCH
-kunna ta bort - DeleteRecipe - DELETE
-
-*/

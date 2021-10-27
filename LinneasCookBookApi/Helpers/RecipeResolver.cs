@@ -9,7 +9,7 @@ namespace LinneasCookBookApi.Helpers
 {
     public class AddRecipeResolver : IValueResolver<PostViewModel, Recipe, Complexity>
     {
-        //från en svårighetssträng till en svårighetsobjekt.
+        //Resolver for the difficulty string to a difficulty object
         public Complexity Resolve(PostViewModel source, Recipe destination, Complexity destMember, ResolutionContext context)
         {
             var repo = context.Items["repo"] as RecipeContext;
